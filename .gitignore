@@ -1,6 +1,14 @@
 # Compiled class file
 *.class
 
+# Git folder #
+/.github/
+
+# Compilation folders #
+/.idea/
+/bin/
+/target/
+
 # Log file
 *.log
 
