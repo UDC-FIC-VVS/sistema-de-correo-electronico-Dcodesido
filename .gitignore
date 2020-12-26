@@ -1,6 +1,14 @@
 # Compiled class file
 *.class
 
+# Compilation folders #
+/.idea/
+/bin/
+/target/
+
+# Random file
+/FICmail.iml
+
 # Log file
 *.log
 
