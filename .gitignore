@@ -1,7 +1,10 @@
 # Compiled class file
 *.class
+.classpath
+.project
 
 # Compilation folders #
+/.settings/
 /.idea/
 /bin/
 /target/
