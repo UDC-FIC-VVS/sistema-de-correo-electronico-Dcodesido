@@ -24,7 +24,8 @@ public class ArchivadorSimpleTest {
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra
 	 * Descripción: Test de unidad que prueba la obtención del nombre
-	 * Método de seleccion de datos: Los adecuados para poder realizar la prueba
+	 * Método de seleccion de datos: Un archivador simple con un nombre
+	 * y espacio determinados para poder realizar la prueba
 	 */
 	@Test
 	public void testObtenerNombre() {
@@ -36,7 +37,8 @@ public class ArchivadorSimpleTest {
 	 * Tipo de test: Funcional dinámico de caja negra
 	 * Descripción: Test de unidad que prueba a almacenar correo cuando el espacio
 	 * es el suficiente 
-	 * Método de seleccion de datos: Los adecuados para poder realizar la prueba,
+	 * Método de seleccion de datos: Un archivador simple con un nombre
+	 * y espacio determinados para poder realizar la prueba,
 	 * siendo el espacio del archivador lo suficientemente alto.
 	 */
 	@Test
@@ -50,7 +52,8 @@ public class ArchivadorSimpleTest {
 	 * Tipo de test: Funcional dinámico de caja negra
 	 * Descripción: Test de unidad que prueba a almacenar correo cuando el espacio
 	 * no es el suficiente
-	 * Método de seleccion de datos: Los adecuados para poder realizar la prueba,
+	 * Método de seleccion de datos: Un archivador simple con un nombre
+	 * y espacio determinados para poder realizar la prueba,
 	 * siendo el espacio del archivador lo suficientemente bajo.
 	 */
 	@Test
@@ -63,7 +66,8 @@ public class ArchivadorSimpleTest {
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra
 	 * Descripción: Test de unidad que prueba la obtención del espacio total
-	 * Método de seleccion de datos: Los adecuados para poder realizar la prueba
+	 * Método de seleccion de datos: Un archivador simple con un nombre
+	 * y espacio determinados para poder realizar la prueba
 	 */
 	@Test
 	public void testObtenerEspacioTotal() {
@@ -74,7 +78,8 @@ public class ArchivadorSimpleTest {
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra
 	 * Descripción: Test de unidad que prueba la obtención del espacio disponible
-	 * Método de seleccion de datos: Los adecuados para poder realizar la prueba
+	 * Método de seleccion de datos: Un archivador simple con un nombre
+	 * y espacio determinados para poder realizar la prueba
 	 */
 	@Test
 	public void testObtenerEspacioDisponible() {
@@ -85,7 +90,8 @@ public class ArchivadorSimpleTest {
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra
 	 * Descripción: Test de unidad que prueba tanto la obtención como el establecimiento del delegado
-	 * Método de seleccion de datos: Los adecuados para poder realizar la prueba
+	 * Método de seleccion de datos: Un archivador simple con un nombre
+	 * y espacio determinados para poder realizar la prueba
 	 */
 	@Test
 	public void testObtenerEstablecerDelegado() {
