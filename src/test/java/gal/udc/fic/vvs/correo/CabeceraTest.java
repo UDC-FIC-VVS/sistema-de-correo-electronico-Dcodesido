@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
-import gal.udc.fic.vvs.email.correo.Adjunto;
 import gal.udc.fic.vvs.email.correo.Cabecera;
 import gal.udc.fic.vvs.email.correo.Mensaje;
 import gal.udc.fic.vvs.email.correo.OperacionInvalida;
@@ -22,9 +21,9 @@ public class CabeceraTest {
 	
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra 
-	 * Descripción: Test de unidad que prueba el establecimiento de leídos
+	 * Descripción: Test de unidad que prueba la establecimiento de leídos
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
-	 * del cuál se crea una cabecera con el que se realizan las pruebas
+	 * del cuál se crea una cabecera con la que se realizan las pruebas
 	 */
 
 	@Test
@@ -43,7 +42,7 @@ public class CabeceraTest {
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la obtención del tamaño
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
-	 * del cuál se crea una cabecera con el que se realizan las pruebas
+	 * del cuál se crea una cabecera con la que se realizan las pruebas
 	 */
 	@Test
 	public void testObtenerTamaño() throws OperacionInvalida {
@@ -58,7 +57,7 @@ public class CabeceraTest {
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la obtención del icono
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
-	 * del cuál se crea un cabecera con el que se realizan las pruebas
+	 * del cuál se crea un cabecera con la que se realizan las pruebas
 	 */
 	@Test
 	public void testObtenerIcono() throws OperacionInvalida {
@@ -75,7 +74,7 @@ public class CabeceraTest {
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la obtención de la previsualización
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
-	 * del cuál se crea una cabecera con el que se realizan las pruebas
+	 * del cuál se crea una cabecera con la que se realizan las pruebas
 	 */
 	@Test
 	public void testObtenerPreVisualizacion() throws OperacionInvalida {
@@ -92,7 +91,7 @@ public class CabeceraTest {
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la obtención de la visualización
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
-	 * del cuál se crea una cabecera con el que se realizan las pruebas
+	 * del cuál se crea una cabecera con la que se realizan las pruebas
 	 */
 	@Test
 	public void testObtenerVisualizacion() throws OperacionInvalida {
@@ -109,7 +108,7 @@ public class CabeceraTest {
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la función explorar()
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
-	 * del cuál se crea una cabecera con el que se espera que devuelva una excepción.
+	 * del cuál se crea una cabecera con la que se espera que devuelva una excepción.
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void testExplorarException() throws OperacionInvalida {
@@ -124,7 +123,7 @@ public class CabeceraTest {
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la función buscar()
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
-	 * del cuál se crea una cabecera con el que se realizan las pruebas
+	 * del cuál se crea una cabecera con la que se realizan las pruebas
 	 */
 	@Test
 	public void testBuscar() throws OperacionInvalida {
@@ -141,7 +140,7 @@ public class CabeceraTest {
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la función obtenerRuta()
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
-	 * del cuál se crea una cabecera con el que se realizan las pruebas
+	 * del cuál se crea una cabecera con la que se realizan las pruebas
 	 */
 	@Test
 	public void testObtenerRuta() throws OperacionInvalida {
@@ -158,7 +157,7 @@ public class CabeceraTest {
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la función añadir()
 	 * Método de seleccion de datos: Dos mensajes compuesto por un texto cada uno a través
-	 * del cuál se crea una cabecera con el que se espera recuperar una excepción
+	 * del cuál se crea una cabecera con la que se espera recuperar una excepción
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void testAñadirException() throws OperacionInvalida {
@@ -177,7 +176,7 @@ public class CabeceraTest {
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la función obtenerHijo()
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
-	 * del cuál se crea una cabecera con el que se espera recuperar una excepción
+	 * del cuál se crea una cabecera con la que se espera recuperar una excepción
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void testObtenerHijoException() throws OperacionInvalida {
@@ -192,7 +191,7 @@ public class CabeceraTest {
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la función obtenerPadre()
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
-	 * del cuál se crea un cabecera con el que se realizan las pruebas
+	 * del cuál se crea un cabecera con la que se realizan las pruebas
 	 */
 	@Test
 	public void testObtenerPadre() throws OperacionInvalida {

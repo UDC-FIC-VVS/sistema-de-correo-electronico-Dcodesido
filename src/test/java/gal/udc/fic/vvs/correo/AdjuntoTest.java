@@ -1,12 +1,12 @@
 package gal.udc.fic.vvs.correo;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
 import gal.udc.fic.vvs.email.correo.Adjunto;
 import gal.udc.fic.vvs.email.correo.Cabecera;
-import gal.udc.fic.vvs.email.correo.Correo;
 import gal.udc.fic.vvs.email.correo.Mensaje;
 import gal.udc.fic.vvs.email.correo.OperacionInvalida;
 
