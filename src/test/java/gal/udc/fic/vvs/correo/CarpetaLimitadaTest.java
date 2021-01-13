@@ -111,7 +111,18 @@ public class CarpetaLimitadaTest {
 		
 		assertEquals(expected, carpetaLim.obtenerVisualizacion());
 	}
-
+	
+	@Test
+	public void testObtenerRuta() throws OperacionInvalida {
+		CarpetaLimitada carpetaLim = new CarpetaLimitada(carpeta, tamaño);
+		Texto texto = new Texto("texto", "...");
+		Mensaje mensaje = new Mensaje(texto);
+		
+		carpetaLim.añadir(mensaje);
+		
+		assertEquals(carpetaLim.obtenerPreVisualizacion(), carpetaLim.obtenerRuta());
+	}
+	
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la función explorar()

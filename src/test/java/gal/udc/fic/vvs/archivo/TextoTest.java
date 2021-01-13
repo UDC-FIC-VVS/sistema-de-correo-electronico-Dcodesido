@@ -5,7 +5,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import gal.udc.fic.vvs.email.archivo.Audio;
 import gal.udc.fic.vvs.email.archivo.Texto;
 
 /**
