@@ -16,11 +16,12 @@ import gal.udc.fic.vvs.email.correo.Reenvio;
  * @author dcode
  */
 public class ReenvioTest {
+	
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la establecimiento de leídos
-	 * Método de seleccion de datos: Un mensaje compuesto por un texto
-	 * con el que se realizan las pruebas
+	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
+	 * los cuales componen el reenvio con el que se realizan las pruebas
 	 */
 	@Test
 	public void testEstablecerLeidosYObtenerLeidos() throws OperacionInvalida {
@@ -37,8 +38,8 @@ public class ReenvioTest {
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la obtención del tamaño
-	 * Método de seleccion de datos: Un mensaje compuesto por un texto
-	 * con el que se realizan las pruebas
+	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
+	 * los cuales componen el reenvio con el que se realizan las pruebas
 	 */
 	@Test
 	public void testObtenerTamaño() throws OperacionInvalida {
@@ -54,8 +55,8 @@ public class ReenvioTest {
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la obtención del icono
-	 * Método de seleccion de datos: Un mensaje compuesto por un texto
-	 * con el que se realizan las pruebas
+	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
+	 * los cuales componen el reenvio con el que se realizan las pruebas
 	 */
 	@Test
 	public void testObtenerIcono() throws OperacionInvalida {
@@ -72,8 +73,8 @@ public class ReenvioTest {
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la obtención de la previsualización
-	 * Método de seleccion de datos: Un mensaje compuesto por un texto
-	 * con el que se realizan las pruebas
+	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
+	 * los cuales componen el reenvio con el que se realizan las pruebas
 	 */
 	@Test
 	public void testObtenerPreVisualizacion() throws OperacionInvalida {
@@ -90,8 +91,8 @@ public class ReenvioTest {
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la obtención de la visualización
-	 * Método de seleccion de datos: Un mensaje compuesto por un texto
-	 * con el que se realizan las pruebas
+	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
+	 * los cuales componen el reenvio con el que se realizan las pruebas
 	 */
 	@Test
 	public void testObtenerVisualizacion() throws OperacionInvalida {
@@ -108,8 +109,8 @@ public class ReenvioTest {
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la función explorar()
-	 * Método de seleccion de datos: Un mensaje compuesto por un texto
-	 * con el que se realizan las pruebas
+	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
+	 * los cuales componen el reenvio con el que se realizan las pruebas
 	 */
 	@Test(expected = OperacionInvalida.class)
 	public void testExplorar() throws OperacionInvalida {
@@ -122,6 +123,38 @@ public class ReenvioTest {
 	    carpeta.añadir(reenvio);
 
 	    reenvio.explorar();
+	}
+	
+	/**
+	 * Tipo de test: Funcional dinámico de caja negra 
+	 * Descripción: Test de unidad que prueba la función añadir()
+	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
+	 * los cuales componen el reenvio con el que se realizan las pruebas
+	 */
+	@Test(expected = OperacionInvalida.class) 
+	public void testAñadir() throws OperacionInvalida {
+		Texto texto = new Texto("texto", "...");
+	    Mensaje mensajeAbs = new Mensaje(texto);
+	    Mensaje mensaje = new Mensaje(texto);
+		Reenvio reenvio = new Reenvio(mensajeAbs, mensaje);
+
+	    reenvio.añadir(mensaje);
+	}
+	
+	/**
+	 * Tipo de test: Funcional dinámico de caja negra 
+	 * Descripción: Test de unidad que prueba la función obtenerHijo()
+	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
+	 * los cuales componen el reenvio con el que se realizan las pruebas
+	 */
+	@Test(expected = OperacionInvalida.class)
+	public void testObtenerHijo() throws OperacionInvalida {
+		Texto texto = new Texto("texto", "...");
+	    Mensaje mensajeAbs = new Mensaje(texto);
+	    Mensaje mensaje = new Mensaje(texto);
+		Reenvio reenvio = new Reenvio(mensajeAbs, mensaje);
+
+	    reenvio.obtenerHijo(1);
 	}
 	
 }

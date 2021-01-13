@@ -1,6 +1,7 @@
 package gal.udc.fic.vvs.correo;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
@@ -128,6 +129,28 @@ public class CarpetaTest {
 		
 		assertEquals(expected, carpeta.obtenerVisualizacion());
 	}
+	
+	/**
+	 * Tipo de test: Funcional dinámico de caja negra 
+	 * Descripción: Test de unidad que prueba la función obtenerRuta()
+	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
+	 * del cuál se crean dos carpetas con las que se realizan las pruebas
+	 */
+	@Test
+	  public void obtenerRuta() throws OperacionInvalida {
+
+		Carpeta carpeta = new Carpeta(nombre);
+		Carpeta carpetaAux = new Carpeta(nombre);
+		Texto texto = new Texto("texto", "...");
+		Mensaje mensaje = new Mensaje(texto);
+		
+		carpetaAux.añadir(mensaje);
+		carpeta.añadir(carpetaAux);
+		
+		String expected = "nombre (1) > nombre (1)";
+
+	    assertEquals(expected, carpetaAux.obtenerRuta());
+	  }
 
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra 
@@ -168,8 +191,8 @@ public class CarpetaTest {
 	/**
 	 * Tipo de test: Funcional dinámico de caja negra 
 	 * Descripción: Test de unidad que prueba la función añadir()
-	 * Método de seleccion de datos: Dos mensajes compuesto por un texto cada uno a través
-	 * del cuál se crea una carpeta con la que se realizan las pruebas
+	 * Método de seleccion de datos: Un mensaje compuesto por un texto cada uno a través
+	 * del cuál se crean dos carpetas con las que se realizan las pruebas
 	 */
 	@Test
 	public void testAñadir() throws OperacionInvalida {
@@ -182,6 +205,27 @@ public class CarpetaTest {
 		carpeta.añadir(carpetaAux);
 		
 		assertEquals(carpeta.obtenerTamaño(), mensaje.obtenerTamaño());
+	}
+	
+	/**
+	 * Tipo de test: Funcional dinámico de caja negra 
+	 * Descripción: Test de unidad que prueba la función añadir()
+	 * Método de seleccion de datos: Un mensaje compuesto por un texto cada uno a través
+	 * del cuál se crean dos carpetas con las que se realizan las pruebas
+	 */
+	@Test
+	public void testAñadirCorreoConPadre() throws OperacionInvalida {
+		Carpeta carpeta = new Carpeta(nombre);
+		Carpeta carpetaAux = new Carpeta(nombre);
+		Carpeta carpetaAux2 = new Carpeta(nombre);
+		Texto texto = new Texto("texto", "...");
+		Mensaje mensaje = new Mensaje(texto);
+		
+		carpetaAux.añadir(mensaje);
+		carpeta.añadir(carpetaAux);
+		carpetaAux2.añadir(carpetaAux);
+		
+		assertNull(carpetaAux2.obtenerPadre());
 	}
 	
 	/**
