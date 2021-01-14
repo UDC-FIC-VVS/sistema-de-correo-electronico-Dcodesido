@@ -57,7 +57,7 @@ public class LogTest {
 	 * Tipo de test: Funcional dinámico de caja negra
 	 * Descripción: Test de unidad que prueba a almacenar correo cuando el espacio
 	 * no es el suficiente
-	 * Un mensaje con texto, y un log
+	 * Método de seleccion de datos: Un mensaje con texto, y un log
 	 * que tenga un archivador simple con un nombre
 	 * y espacio determinados para poder realizar la prueba,
 	 * siendo el espacio del archivador lo suficientemente bajo.

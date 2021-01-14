@@ -1,6 +1,6 @@
 package gal.udc.fic.vvs.archivador;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -98,7 +98,7 @@ public class ArchivadorSimpleTest {
 		ArchivadorSimple archivador = new ArchivadorSimple(nombreArchivador, espacio);
 		ArchivadorSimple delegado = new ArchivadorSimple(nombreDelegado, espacio);
 		archivador.establecerDelegado(delegado);
-		assertTrue(archivador.obtenerDelegado() == null);
+		assertNull(archivador.obtenerDelegado());
 	}
 	
 	
