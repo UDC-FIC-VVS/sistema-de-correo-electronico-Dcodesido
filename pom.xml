@@ -17,7 +17,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
-		 <junit-quickcheck.version>0.9.1</junit-quickcheck.version>
+		<junit-quickcheck.version>0.9.1</junit-quickcheck.version>
 	</properties>
 
 	<dependencies>
@@ -39,6 +39,13 @@
 			<version>${junit-quickcheck.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.tngtech.archunit</groupId>
+			<artifactId>archunit</artifactId>
+			<version>0.15.0</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 
@@ -85,6 +92,11 @@
 				<plugin>
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.0.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.pitest</groupId>
+					<artifactId>pitest-maven</artifactId>
+					<version>LATEST</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
