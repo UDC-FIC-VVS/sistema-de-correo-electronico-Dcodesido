@@ -2,6 +2,7 @@ package gal.udc.fic.vvs.correo;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
@@ -111,8 +112,9 @@ public class ReenvioTest {
 	 * Descripción: Test de unidad que prueba la función explorar()
 	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
 	 * los cuales componen el reenvio con el que se realizan las pruebas
+	 * @throws OperacionInvalida 
 	 */
-	@Test(expected = OperacionInvalida.class)
+	@Test
 	public void testExplorar() throws OperacionInvalida {
 		Texto texto = new Texto("texto", "...");
 	    Mensaje mensajeAbs = new Mensaje(texto);
@@ -122,7 +124,7 @@ public class ReenvioTest {
 
 	    carpeta.añadir(reenvio);
 
-	    reenvio.explorar();
+	    Assert.assertThrows(OperacionInvalida.class, () -> reenvio.explorar());
 	}
 	
 	/**
@@ -131,14 +133,14 @@ public class ReenvioTest {
 	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
 	 * los cuales componen el reenvio con el que se realizan las pruebas
 	 */
-	@Test(expected = OperacionInvalida.class) 
+	@Test
 	public void testAñadir() throws OperacionInvalida {
 		Texto texto = new Texto("texto", "...");
 	    Mensaje mensajeAbs = new Mensaje(texto);
 	    Mensaje mensaje = new Mensaje(texto);
 		Reenvio reenvio = new Reenvio(mensajeAbs, mensaje);
 
-	    reenvio.añadir(mensaje);
+		Assert.assertThrows(OperacionInvalida.class, () -> reenvio.añadir(mensaje));
 	}
 	
 	/**
@@ -147,14 +149,14 @@ public class ReenvioTest {
 	 * Método de seleccion de datos: Dos mensajes compuesto por un texto
 	 * los cuales componen el reenvio con el que se realizan las pruebas
 	 */
-	@Test(expected = OperacionInvalida.class)
+	@Test
 	public void testObtenerHijo() throws OperacionInvalida {
 		Texto texto = new Texto("texto", "...");
 	    Mensaje mensajeAbs = new Mensaje(texto);
 	    Mensaje mensaje = new Mensaje(texto);
 		Reenvio reenvio = new Reenvio(mensajeAbs, mensaje);
 
-	    reenvio.obtenerHijo(1);
+		Assert.assertThrows(OperacionInvalida.class, () -> reenvio.obtenerHijo(1));
 	}
 	
 }

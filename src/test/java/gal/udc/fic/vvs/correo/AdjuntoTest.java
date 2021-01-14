@@ -2,6 +2,7 @@ package gal.udc.fic.vvs.correo;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
@@ -107,13 +108,13 @@ public class AdjuntoTest {
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
 	 * del cuál se crea un adjunto con el que se espera que devuelva una excepción.
 	 */
-	@Test(expected = OperacionInvalida.class)
-	public void testExplorarException() throws OperacionInvalida {
+	@Test
+	public void testExplorarException() {
 		Texto texto = new Texto("texto", "...");
 		Mensaje mensaje = new Mensaje(texto);
 		Adjunto adjunto = new Adjunto(mensaje, texto);
 		
-		adjunto.explorar();
+		Assert.assertThrows(OperacionInvalida.class, () -> adjunto.explorar());
 	}
 
 	/**
@@ -156,8 +157,8 @@ public class AdjuntoTest {
 	 * Método de seleccion de datos: Dos mensajes compuesto por un texto cada uno a través
 	 * del cuál se crea un adjunto con el que se espera recuperar una excepción
 	 */
-	@Test(expected = OperacionInvalida.class)
-	public void testAñadirException() throws OperacionInvalida {
+	@Test
+	public void testAñadirException(){
 		Texto texto = new Texto("texto", "...");
 		
 		Mensaje mensaje = new Mensaje(texto);
@@ -166,7 +167,7 @@ public class AdjuntoTest {
 		Mensaje mensajeAux = new Mensaje(texto);
 		Cabecera adjuntoAux = new Cabecera(mensajeAux, "nombre", "valor");
 		
-		adjunto.añadir(adjuntoAux);
+		Assert.assertThrows(OperacionInvalida.class, () -> adjunto.añadir(adjuntoAux));
 	}
 	
 	/**
@@ -175,13 +176,13 @@ public class AdjuntoTest {
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
 	 * del cuál se crea un adjunto con el que se espera recuperar una excepción
 	 */
-	@Test(expected = OperacionInvalida.class)
-	public void testObtenerHijoException() throws OperacionInvalida {
+	@Test
+	public void testObtenerHijoException() {
 		Texto texto = new Texto("texto", "...");
 		Mensaje mensaje = new Mensaje(texto);
 		Adjunto adjunto = new Adjunto(mensaje, texto);
 		
-		adjunto.obtenerHijo(0);
+		Assert.assertThrows(OperacionInvalida.class, () -> adjunto.obtenerHijo(0));
 	}
 	
 	/**

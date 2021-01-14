@@ -2,6 +2,7 @@ package gal.udc.fic.vvs.correo;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
@@ -110,13 +111,13 @@ public class CabeceraTest {
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
 	 * del cuál se crea una cabecera con la que se espera que devuelva una excepción.
 	 */
-	@Test(expected = OperacionInvalida.class)
-	public void testExplorarException() throws OperacionInvalida {
+	@Test
+	public void testExplorarException() {
 		Texto texto = new Texto("texto", "...");
 		Mensaje mensaje = new Mensaje(texto);
 		Cabecera cabecera = new Cabecera(mensaje, nombre, valor);
 		
-		cabecera.explorar();
+		Assert.assertThrows(OperacionInvalida.class, () -> cabecera.explorar());
 	}
 
 	/**
@@ -159,7 +160,7 @@ public class CabeceraTest {
 	 * Método de seleccion de datos: Dos mensajes compuesto por un texto cada uno a través
 	 * del cuál se crea una cabecera con la que se espera recuperar una excepción
 	 */
-	@Test(expected = OperacionInvalida.class)
+	@Test
 	public void testAñadirException() throws OperacionInvalida {
 		Texto texto = new Texto("texto", "...");
 		
@@ -169,7 +170,7 @@ public class CabeceraTest {
 		Mensaje mensajeAux = new Mensaje(texto);
 		Cabecera cabeceraAux = new Cabecera(mensajeAux, "nombre", "valor");
 		
-		cabecera.añadir(cabeceraAux);
+		Assert.assertThrows(OperacionInvalida.class, () -> cabecera.añadir(cabeceraAux));
 	}
 	
 	/**
@@ -178,13 +179,13 @@ public class CabeceraTest {
 	 * Método de seleccion de datos: Un mensaje compuesto por un texto a través
 	 * del cuál se crea una cabecera con la que se espera recuperar una excepción
 	 */
-	@Test(expected = OperacionInvalida.class)
+	@Test
 	public void testObtenerHijoException() throws OperacionInvalida {
 		Texto texto = new Texto("texto", "...");
 		Mensaje mensaje = new Mensaje(texto);
 		Cabecera cabecera = new Cabecera(mensaje, nombre, valor);
 		
-		cabecera.obtenerHijo(0);
+		Assert.assertThrows(OperacionInvalida.class, () -> cabecera.obtenerHijo(0));
 	}
 	
 	/**
