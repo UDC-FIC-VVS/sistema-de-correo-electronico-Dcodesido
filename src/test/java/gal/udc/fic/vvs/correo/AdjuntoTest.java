@@ -24,7 +24,7 @@ public class AdjuntoTest {
 	 * del cuál se crea un adjunto con el que se realizan las pruebas
 	 */
 	@Test
-	public void testEstablecerLeidosYObtenerLeidos() throws OperacionInvalida {
+	public void testEstablecerLeidosYObtenerNoLeidos() throws OperacionInvalida {
 		
 		Texto texto = new Texto("texto", "...");
 		Mensaje mensaje = new Mensaje(texto);
@@ -47,7 +47,7 @@ public class AdjuntoTest {
 		Mensaje mensaje = new Mensaje(texto);
 		Adjunto adjunto = new Adjunto(mensaje, texto);
 		
-		assertEquals(6, adjunto.obtenerTamaño());
+		assertEquals(texto.obtenerTamaño() + mensaje.obtenerTamaño(), adjunto.obtenerTamaño());
 	}
 
 	/**
